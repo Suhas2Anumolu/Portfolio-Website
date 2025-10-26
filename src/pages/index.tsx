@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Award, Cpu, Shield, BookOpen } from 'lucide-react';
+import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 export default function Home() {
   useEffect(() => {
@@ -95,8 +96,8 @@ export default function Home() {
               Get in Touch
             </a>
           </div>
-          <div className="flex gap-4 mt-4 justify-center md:justify-start text-2xl text-teal-400">
-  <Link href="www.linkedin.com/in/suhas-anumolu-7233b0324" target="_blank" rel="noopener noreferrer">
+       <div className="flex gap-4 mt-4 justify-center md:justify-start text-2xl text-teal-400">
+  <Link href="https://www.linkedin.com/in/suhas-anumolu-7233b0324" target="_blank" rel="noopener noreferrer">
     <FaLinkedin className="hover:scale-110 transition-transform" />
   </Link>
   <Link href="https://github.com/Suhas2Anumolu" target="_blank" rel="noopener noreferrer">
@@ -109,7 +110,6 @@ export default function Home() {
     <FaEnvelope className="hover:scale-110 transition-transform" />
   </Link>
 </div>
-
         </motion.div>
       </section>
 
