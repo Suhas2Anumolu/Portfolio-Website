@@ -95,6 +95,21 @@ export default function Home() {
               Get in Touch
             </a>
           </div>
+          <div className="flex gap-4 mt-4 justify-center md:justify-start text-2xl text-teal-400">
+  <Link href="www.linkedin.com/in/suhas-anumolu-7233b0324" target="_blank" rel="noopener noreferrer">
+    <FaLinkedin className="hover:scale-110 transition-transform" />
+  </Link>
+  <Link href="https://github.com/Suhas2Anumolu" target="_blank" rel="noopener noreferrer">
+    <FaGithub className="hover:scale-110 transition-transform" />
+  </Link>
+  <Link href="https://www.instagram.com/suhasanumolu/" target="_blank" rel="noopener noreferrer">
+    <FaInstagram className="hover:scale-110 transition-transform" />
+  </Link>
+  <Link href="mailto:suhasanumolu@gmail.com">
+    <FaEnvelope className="hover:scale-110 transition-transform" />
+  </Link>
+</div>
+
         </motion.div>
       </section>
 
