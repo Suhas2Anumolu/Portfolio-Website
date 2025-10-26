@@ -84,7 +84,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1d-xw-yzPeZNQZGSWdBNd646grcD806Ei/view"
               className="bg-teal-500 px-5 py-2.5 rounded text-black font-semibold hover:bg-teal-400 transition shadow"
             >
               View Resume
