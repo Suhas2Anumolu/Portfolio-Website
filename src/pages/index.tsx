@@ -1,11 +1,11 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Award, Cpu, Shield, BookOpen } from 'lucide-react';
 
 export default function Home() {
   useEffect(() => {
-    // Fully type-safe smooth scroll handler
     const handleSmoothScroll = (e: MouseEvent) => {
       const target = e.currentTarget as HTMLAnchorElement;
       if (target.hash && target.pathname === window.location.pathname) {
@@ -53,14 +53,19 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="home" className="flex flex-col md:flex-row justify-center items-center gap-12 pt-40 pb-24 px-8 md:px-16">
-        <motion.img
-          src="Suhas1.png"
-          alt="Profile"
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="w-64 h-64 md:w-80 md:h-80 border-4 border-teal-500 shadow-xl object-cover rounded-full hover:scale-105 transition-transform"
-        />
+        >
+          <Image
+            src="/Suhas1.png"
+            alt="Profile"
+            width={320}
+            height={320}
+            className="w-64 h-64 md:w-80 md:h-80 border-4 border-teal-500 shadow-xl object-cover rounded-full hover:scale-105 transition-transform"
+          />
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,10 +73,10 @@ export default function Home() {
           className="max-w-xl text-center md:text-left"
         >
           <h2 className="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
-            Hi, I'm <span className="text-teal-400">Suhas Anumolu</span>
+            Hi, I&apos;m <span className="text-teal-400">Suhas Anumolu</span>
           </h2>
           <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-            I'm a student researcher passionate about <span className="text-white font-medium">artificial intelligence</span>,
+            I&apos;m a student researcher passionate about <span className="text-white font-medium">artificial intelligence</span>,
             <span className="text-white font-medium"> cybersecurity</span>, and building technology that creates real-world impact.
             Intending to major in <span className="text-white font-medium">Computer Science with a focus on AI</span>,
             I love transforming ideas into intelligent systems that make our world smarter, safer, and more sustainable.
@@ -109,9 +114,9 @@ export default function Home() {
       {/* Cards Section */}
       <section className="grid md:grid-cols-3 gap-8 px-8 md:px-16 py-20 bg-gray-950">
         {[
-          { title: 'Activities', img: 'robotics.jpg', link: '/activities', desc: 'Explore my leadership and club involvement.' },
+          { title: 'Activities', img: '/robotics.jpg', link: '/activities', desc: 'Explore my leadership and club involvement.' },
           { title: 'Projects', img: '/image1.png', link: '/projects', desc: 'Discover my coding and AI-based creations.' },
-          { title: 'Research', img: 'infosys_logo.png', link: '#research', desc: 'Learn more about my academic and applied research.' }
+          { title: 'Research', img: '/infosys_logo.png', link: '#research', desc: 'Learn more about my academic and applied research.' }
         ].map(({ title, img, link, desc }) => (
           <motion.div
             key={title}
@@ -122,9 +127,11 @@ export default function Home() {
               href={link}
               className="bg-gray-800 p-6 rounded-2xl shadow-lg block group hover:bg-gray-750 transition"
             >
-              <img
+              <Image
                 src={img}
                 alt={title}
+                width={400}
+                height={224}
                 className="w-full h-56 object-cover rounded-xl mb-4 group-hover:opacity-90 transition"
               />
               <h3 className="text-xl font-semibold mb-2 text-teal-400">{title}</h3>
